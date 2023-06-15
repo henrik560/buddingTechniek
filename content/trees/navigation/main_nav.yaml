@@ -1,0 +1,29 @@
+tree:
+  -
+    id: 26f2f86f-4e99-4b68-b9f1-0343b8d9f7cf
+    title: Home
+    url: /
+  -
+    id: 8a27d2f3-e670-42c3-a2dc-9e083ad8c21b
+    title: Producten
+    children:
+      -
+        id: bccb7cfe-22ab-499c-9c3d-6242363aff96
+        title: Machines
+        url: /occasions
+      -
+        id: e237f1d4-bce2-4777-86b6-2422377d1876
+        title: Solatube
+        url: /solatube
+      -
+        id: 5127ff87-599a-429c-bf96-b9da9a6da6d5
+        title: Zonnepanelen
+        url: /zonnepanelen
+      -
+        id: c396934f-c0a4-40d2-8c21-4d68deac51f3
+        title: 'Automatisch Ruwvoer'
+        url: /automatisch-ruwvoer
+  -
+    id: f3e91c77-f7ab-4738-9ee9-2c6cbecc7c5a
+    title: Contact
+    url: /contact

@@ -1,0 +1,25 @@
+.vue-contact-block {
+    .container {
+        .inner {
+            .form-wrapper {
+                .form {
+                    .input-submit {
+                        &.valid {
+                            background-color: $color-secondary;
+                            cursor: pointer;
+                        }
+
+                        &.invalid {
+                            background-color: $color-light-gray;
+                            cursor: not-allowed;
+
+                            input {
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

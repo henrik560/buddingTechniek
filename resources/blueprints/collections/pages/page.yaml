@@ -1,0 +1,51 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content_blocks
+        field:
+          mode: default
+          create: true
+          display: 'Content Blocks'
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          collections:
+            - header_block
+            - vehicles_block
+            - header_full_block
+            - recent_vehicles_block
+            - text_with_image_block
+            - vehicle_categories_block
+            - image_block
+            - images_swiper_block
+            - text_block
+            - contact_block
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+title: Page

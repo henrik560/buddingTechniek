@@ -1,0 +1,258 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: phonenumber
+        field:
+          placeholder: '000 000 0000'
+          input_type: text
+          character_limit: 13
+          antlers: false
+          display: Phonenumber
+          type: text
+          icon: text
+          instructions: 'Example: 000 000 0000'
+          listable: hidden
+          instructions_position: below
+          visibility: visible
+          duplicate: false
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          placeholder: hi@designated.nl
+          input_type: text
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          instructions: 'Example: hi@designated.nl'
+          listable: hidden
+          instructions_position: below
+          visibility: visible
+          duplicate: false
+          validate:
+            - required
+            - email
+      -
+        handle: address
+        field:
+          placeholder: 'Dublinstraat 48, Zoetemeer'
+          input_type: text
+          antlers: false
+          display: Address
+          type: text
+          icon: text
+          instructions: 'Example: Dublinstraat 48, Zoetemeer'
+          listable: hidden
+          instructions_position: below
+          visibility: visible
+          duplicate: false
+          validate:
+            - required
+      -
+        handle: kvk_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Kvk nummer'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: tax_number
+        field:
+          input_type: text
+          antlers: false
+          display: 'Btw nummer'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+  office_hours:
+    display: 'Openings Tijden'
+    fields:
+      -
+        handle: monday
+        field:
+          input_type: text
+          antlers: false
+          display: Maandag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: tuesday
+        field:
+          input_type: text
+          antlers: false
+          display: Dinsdag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: wednesday
+        field:
+          input_type: text
+          antlers: false
+          display: Woensdag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: thursday
+        field:
+          input_type: text
+          antlers: false
+          display: Donderdag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: friday
+        field:
+          input_type: text
+          antlers: false
+          display: Vrijdag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: saturday
+        field:
+          input_type: text
+          antlers: false
+          display: Zaterdag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: sunday
+        field:
+          input_type: text
+          antlers: false
+          display: Zondag
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+  social_media:
+    display: 'Social media'
+    fields:
+      -
+        handle: social_media
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    mode: list
+                    container: images
+                    folder: icons
+                    restrict: true
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    min_files: 1
+                    display: Icoon
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Titel
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: link
+                  field:
+                    display: Link
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+          display: 'Social Media'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  pages:
+    display: Pages
+    fields:
+      -
+        handle: privacy_policy_page
+        field:
+          collections:
+            - pages
+          display: 'Privacy Policy Page'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: terms_conditions_page
+        field:
+          collections:
+            - pages
+          display: 'Terms & Conditions Page'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible

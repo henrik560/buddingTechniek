@@ -1,0 +1,70 @@
+.vue-vehicle-detail-page {
+    .container {
+        .inner {
+            .section-header {
+                gap: 4rem;
+
+                .column-left {
+                    .vehicle-swiper {
+                        .vehicle-thumbnail {
+                            .image-wrapper {
+                                .swiper {
+                                    .swiper-slide {
+                                        height: auto;
+                                        max-height: 36rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .images-slides {
+                            .swiper {
+                                .swiper-wrapper {
+                                    .swiper-slide {
+                                        height: auto;
+                                        max-height: 8rem;
+                                    }
+                                }
+                            }
+
+                            .swiper-button-next,
+                            .swiper-button-prev {
+                                background-color: rgba($color: $color-primary, $alpha: 0.5);
+                                transition: $transition-sm;
+                                height: 100%;
+                                width: 2.25rem;
+                                top: 0;
+                                margin: 0;
+                                color: $color-secondary;
+
+                                &.next {
+                                    right: 0;
+                                }
+
+                                &.prev {
+                                    left: 0;
+                                }
+
+                                &:hover {
+                                    font-weight: bold;
+                                    background-color: rgba($color: $color-primary, $alpha: 0.85);
+                                    width: 4rem;
+                                }
+
+                                &.swiper-button-disabled {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .column-right {
+                    .header {
+                        .title {}
+                    }
+                }
+            }
+        }
+    }
+}

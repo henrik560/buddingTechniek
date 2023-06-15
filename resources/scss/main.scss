@@ -1,0 +1,40 @@
+//*Tailwind classes
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+//*Base scss
+@import './variable.scss', './typography.scss';
+
+//*Animations
+@import './Components/animations/animations.scss';
+
+//*Compontents (vue)
+@import './Components/vue/vehicle/vehicle.scss';
+
+//*Components
+@import './Components/navbar.scss', './Components/footer.scss';
+
+//*ContentBlocks
+@import './Components/vue/headerBlock/half/headerBlock.scss',
+'./Components/vue/vehicleBlock/vehicleBlock.scss',
+'./Components/vue/recentVehiclesBlock/recentVehiclesBlock.scss',
+'./Components/vue/headerBlock/full/headerBlock.scss',
+'./Components/vue/textWithImage/textWIthImage.scss',
+'./Components/vue/vehicleBlock/topBar/topBar.scss',
+'./Components/vue/imagesSwiperBlock/imagesSwiperBlock.scss',
+'./Components/vue/textBlock/textBlock.scss',
+'./Components/vue/contactBlock/globalContactBlock.scss',
+'./Components/vue/contactBlock/large/contactBlock.scss',
+'./Components/vue/vehicleCategoriesBlock/category/category.scss',
+'./Components/vue/vehicleBlock/searchBar/searchBar.scss';
+
+@import './Components/vue/pages/vehiclePage.scss';
+
+body {
+    background-color: $color-primary;
+}
+
+.section {
+    padding: 6rem 0;
+}

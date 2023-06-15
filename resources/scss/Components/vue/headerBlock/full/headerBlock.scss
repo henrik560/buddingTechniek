@@ -1,0 +1,68 @@
+.vue-header-full-block {
+    .wrapper {
+        height: 36rem;
+    }
+
+    .container {
+        .inner {
+            background-color: rgba($color: $color-primary, $alpha: 0.9);
+
+            .content {
+                h1 {
+                    pointer-events: none;
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    margin-bottom: 0.75rem;
+
+                    a {
+                        color: $color-secondary;
+                    }
+                }
+
+                p {
+                    &:first-of-type {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                p {
+                    &:last-of-type {
+                        display: flex;
+                        gap: 1.5rem;
+
+                        @media screen and (max-width: 430px) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    a {
+                        cursor: pointer;
+                        width: fit-content;
+                        transition: $transition-sm;
+                        padding: 0.25rem 1rem;
+                        background-color: $color-secondary;
+                        border: 2px solid $color-secondary;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+
+                        &:last-of-type {
+                            background-color: transparent;
+                        }
+
+                        &:hover {
+                            &:not(&:last-of-type) {
+                                background-color: transparent;
+                                color: $color-secondary;
+                            }
+
+                            &:last-of-type {
+                                border: 2px solid lighten($color-secondary, 10);
+                                color: lighten($color-secondary, 10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

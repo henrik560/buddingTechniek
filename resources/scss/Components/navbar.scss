@@ -1,0 +1,43 @@
+.navbar {
+    .container {
+        .navbar-list {
+            .dropdown-navbar {
+                box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.75);
+            }
+
+            .navbar-link-item {
+                position: relative;
+
+                &:after,
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    top: -2px;
+                    width: 60%;
+                    max-width: 0px;
+                    height: 2px;
+                    transition: opacity 0.5s, max-width 0.7s;
+                    opacity: 0;
+                }
+
+                &:after {
+                    top: unset;
+                    right: 0;
+                    bottom: -2px;
+                }
+
+                &:hover {
+                    color: $color-secondary;
+
+                    &:after,
+                    &:before {
+                        max-width: 100px;
+                        background-color: $color-secondary;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

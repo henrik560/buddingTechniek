@@ -1,0 +1,11 @@
+.vue-vehicle-category {
+    &:hover {
+        .inner {
+            .title {
+                h3 {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+}

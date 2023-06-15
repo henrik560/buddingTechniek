@@ -1,0 +1,58 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+      -
+        handle: form
+        field:
+          max_items: 1
+          display: Form
+          type: form
+          icon: form
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: image_toggle
+        field:
+          default: true
+          display: Afbeelding
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: image
+        field:
+          mode: list
+          container: images
+          folder: content-images
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          min_files: 1
+          display: Afbeelding
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          if:
+            image_toggle: 'equals true'
+title: 'Contact Block'

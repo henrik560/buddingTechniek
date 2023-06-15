@@ -1,0 +1,26 @@
+.vue-text-block {
+    .container {
+        .inner {
+            .content {
+
+                h1,
+                h2,
+                h3 {
+                    word-break: normal;
+
+                    @media screen and (max-width: 768px) {
+                        word-break: break-all;
+                    }
+                }
+
+                p {
+                    margin-bottom: 4rem;
+
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

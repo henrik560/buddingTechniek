@@ -1,0 +1,66 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - h1
+            - h2
+            - h3
+            - bold
+            - italic
+            - alignleft
+            - aligncenter
+            - alignright
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - anchor
+          save_html: true
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: true
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: categories
+        field:
+          mode: default
+          create: false
+          taxonomies:
+            - tags
+          display: Categories
+          type: terms
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+title: 'Vehicle Categories Block'

@@ -1,0 +1,73 @@
+.vue-vehicle-template {
+    background-color: $color-light-gray;
+    transition: $transition-sm;
+
+    &:hover {
+        box-shadow: 0 0.3472222222vw 4.1666666667vw rgba(0, 0, 0, .45);
+
+        .vehicle-container {
+            .content {
+                .view-button {
+                    background-color: rgba($color-secondary, 0.75);
+                }
+            }
+        }
+    }
+
+    .vehicle-container {
+        .content {
+            margin-bottom: 3rem;
+
+            .price {
+                color: rgba($color-text, 0.7);
+                font-size: 1rem;
+                line-height: 1.25rem;
+                margin-bottom: 0.75rem;
+                letter-spacing: 0.15rem;
+            }
+
+            .title {
+                line-height: 2rem;
+                font-size: 2rem;
+                margin-bottom: 1.25rem;
+                color: $color-secondary;
+            }
+
+            .specifications-wrapper {
+                .specifications {
+                    .spec {
+                        .spec-container {
+                            .spec-title {
+                                font-size: 1rem;
+                                font-weight: bold;
+                                letter-spacing: 0.075rem;
+
+                                &:after {
+                                    content: ":";
+                                    display: inline-block;
+                                    color: $color-secondary;
+                                    font-weight: bold;
+                                    font-size: 1.15rem;
+                                }
+                            }
+
+                            .spec-value {
+                                font-size: 1rem;
+                                letter-spacing: 0.025rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .view-button {
+                background-color: $color-secondary;
+                color: $color-text;
+                font-weight: bold;
+                letter-spacing: 0.05rem;
+                padding: 0.5rem 1.25rem;
+                transition: $transition-sm;
+            }
+        }
+    }
+}

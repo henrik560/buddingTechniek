@@ -1,0 +1,36 @@
+title: 'Company Details'
+data:
+  phonenumber: '06 116 678 77'
+  email: info@buddingtechniek.nl
+  address: 'Cuneraweg 266, 3911 RT Rhenen'
+  kvk_number: '77289811'
+  tax_number: NL003176188B87
+  monday: '07:00 - 21:00'
+  tuesday: '07:00 - 21:00'
+  wednesday: '07:00 - 21:00'
+  thursday: '07:00 - 21:00'
+  friday: '07:00 - 21:00'
+  saturday: '08:00 - 21:00'
+  sunday: '--------------'
+  social_media:
+    -
+      id: liofm8ty
+      icon: icons/facebook-app-symbol.png
+      title: Facebook
+      link: 'https://www.facebook.com'
+      type: new_set
+      enabled: true
+    -
+      id: liofprfj
+      icon: icons/instagram.png
+      title: Instragram
+      link: 'https://www.instagram.com'
+      type: new_set
+      enabled: true
+    -
+      id: liofq5lf
+      icon: icons/linkedin.png
+      title: LinkedIn
+      link: 'https://www.linkedin.com'
+      type: new_set
+      enabled: true

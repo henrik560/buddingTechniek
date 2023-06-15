@@ -1,0 +1,21 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: header_content
+        field:
+          restrict: true
+          automatic_line_breaks: true
+          automatic_links: true
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Header Content'
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required

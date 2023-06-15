@@ -1,0 +1,44 @@
+.vue-header-half-block {
+    .wrapper {
+        .header-image {
+            @media screen and (min-width: 768px) {
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -75px;
+                    right: 0;
+                    width: 300px;
+                    height: 300%;
+                    transform: rotate(30deg);
+                    z-index: 10;
+                    background-color: $color-primary;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    right: -100%;
+                    top: 0;
+                    z-index: 10;
+                    background-color: $color-primary;
+
+                }
+            }
+        }
+
+        .container {
+            .inner {
+                .content {
+                    h1 {
+                        text-shadow: 2px 2px 4px #000000;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

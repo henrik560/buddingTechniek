@@ -1,0 +1,68 @@
+.vue-contact-block {
+    &.large-contact-block {
+        .container {
+            .inner {
+                .column {
+                    .content {
+                        .details {
+                            p {
+                                &:before {
+                                    content: '';
+                                    display: block;
+                                    position: relative;
+                                    width: 20px;
+                                    height: 20px;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                }
+                            }
+
+                            .address {
+                                &:before {
+                                    background-image: url('../assets/images/icons/location.png');
+                                }
+                            }
+
+                            .phonenumber {
+                                &:before {
+                                    background-image: url('../assets/images/icons/Phone.png');
+                                }
+                            }
+
+                            .email {
+                                &:before {
+                                    background-image: url('../assets/images/icons/email.png');
+                                }
+                            }
+
+                            .kvk {
+                                &:before {
+                                    background-image: url('../assets/images/icons/hand-shake.png');
+                                }
+                            }
+
+                            .tax {
+                                &:before {
+                                    background-image: url('../assets/images/icons/tax.png');
+                                }
+                            }
+                        }
+
+                        .visit_by_appointment {
+                            margin-top: 0.5rem;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                            color: rgba($color: $color-text, $alpha: 0.5);
+                        }
+
+                        .office-hours {
+                            .row {
+                                border-bottom: 2px soldi;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

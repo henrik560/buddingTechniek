@@ -1,0 +1,74 @@
+.vue-recent-vehicles-block {
+    .container {
+        .inner {
+            .header {
+                h2 {
+                    color: $color-text;
+                    pointer-events: none;
+                    font-size: 4rem;
+                    line-height: 4.5rem;
+                    margin-bottom: 1rem;
+
+                    a {
+                        color: $color-secondary;
+                    }
+                }
+
+                p {
+                    a {
+                        color: $color-secondary;
+                        transition: $transition-sm;
+                        border-bottom: 2px solid $color-primary;
+
+                        &:hover {
+                            border-bottom: 2px solid $color-secondary;
+                        }
+                    }
+                }
+            }
+
+            .body {
+                margin-bottom: 1.5rem;
+
+                .vehicles {
+                    display: flex;
+
+                    .swiper-slide {
+                        height: auto;
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                width: 100% !important;
+                position: relative;
+                transform: none !important;
+                inset: 0;
+
+                .swiper-pagination-bullet {
+                    display: block !important;
+                    width: 15px;
+                    height: 15px;
+                    min-width: 15px;
+                    min-height: 15px;
+                    max-width: 15px;
+                    max-height: 15px;
+                    transition: 0.3s ease-in-out;
+
+                    &:not(.swiper-pagination-bullet-active) {
+                        border: 2px solid $color-secondary;
+                        opacity: 0.5;
+                    }
+
+                    &.swiper-pagination-bullet-active {
+                        background-color: $color-secondary !important;
+                        width: 60px !important;
+                        min-width: 60px !important;
+                        max-width: 60px !important;
+                        border-radius: 25px !important;
+                    }
+                }
+            }
+        }
+    }
+}

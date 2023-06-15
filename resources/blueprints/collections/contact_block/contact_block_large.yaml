@@ -1,0 +1,83 @@
+title: 'Contact Block Large'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - h1
+            - h2
+            - h3
+            - bold
+            - underline
+            - strikethrough
+            - italic
+            - superscript
+            - subscript
+            - horizontalrule
+            - alignleft
+            - aligncenter
+            - alignright
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - table
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: form
+        field:
+          max_items: 1
+          display: Form
+          type: form
+          icon: form
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: google_maps_embed
+        field:
+          display: 'Google Maps Embed'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required

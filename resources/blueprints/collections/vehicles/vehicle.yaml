@@ -1,0 +1,150 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: price_notk
+        field:
+          default: false
+          display: 'Prijs (N.O.T.K.)'
+          type: toggle
+          icon: toggle
+          instructions: 'Wanneer ingeschakeld, prijs is "N.O.T.K." wanneer uitgeschakeld, specifieke prijs opgeven.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: price
+        field:
+          display: Price
+          type: float
+          icon: float
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - 'min:1'
+          instructions: 'Bijvoorbeeld: 15.10 (Geen komma''s gebruiken maar punten!)'
+          if:
+            price_notk: 'equals false'
+      -
+        handle: thumbnail
+        field:
+          mode: list
+          container: images
+          folder: vehicles
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          min_files: 1
+          display: 'Hoofd Afbeelding'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: images
+        field:
+          mode: list
+          container: images
+          folder: vehicles
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          min_files: 1
+          display: Afbeeldingen
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: specifications
+        field:
+          collapse: false
+          previews: true
+          sets:
+            specificatie:
+              display: Specificatie
+              fields:
+                -
+                  handle: spec_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Naam
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+                -
+                  handle: spec_value
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Waarde
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    validate:
+                      - required
+          display: Specifications
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: default
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          create: false
+      -
+        handle: search_keys
+        field:
+          type: terms
+          taxonomies:
+            - search_keys
+          display: Zoekwoorden
+          mode: default
+          create: true
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+title: Vehicle
