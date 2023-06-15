@@ -49,10 +49,10 @@ $ php artisan migrate
 $ npm install
 ```
 
-8. Build the assets using Laravel Mix:
+8. Build the assets using Vite:
 
 ```
-$ npm run dev
+$ npm run build
 ```
 
 Development:
