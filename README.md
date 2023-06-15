@@ -14,13 +14,13 @@ Before getting started, make sure you have the following tools and software inst
 1. Clone the repository to your local environment:
 
 ```
-$ git clone https://github.com/henrik560/Designated.git
+$ git clone https://github.com/henrik560/buddingTechniek.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-$ cd Designated
+$ cd buddingTechniek
 ```
 
 3. Install the PHP dependencies using Composer:
@@ -68,5 +68,5 @@ $ php artisan serve
 Feel free to customize and add your personal touch to this guide. Have fun building your amazing project!
 
 **Note:**
-This project is available on [GitHub](https://github.com/henrik560/Designated).
+This project is available on [GitHub](https://github.com/henrik560/buddingTechniek).
 
