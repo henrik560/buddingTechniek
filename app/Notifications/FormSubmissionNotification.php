@@ -6,6 +6,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\Log;
+
+use function PHPUnit\Framework\isNull;
 
 class FormSubmissionNotification extends Notification
 {
@@ -43,16 +46,23 @@ class FormSubmissionNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
+        $mailMessage = (new MailMessage)
             ->subject("Nieuw bericht op BuddingTechniek.nl")
             ->greeting("Dag!")
             ->line("U heeft een nieuw bericht ontvangen op: Buddingtechniek.nl")
             ->line("Naam: " . $this->submission["name"])
             ->line("E-Mailadres: " . $this->submission["email"])
             ->line("Telefoonnummer: " . $this->submission["phonenumber"])
-            ->line("Bericht: " . $this->submission["message"])
-            ->action("Bekijk bericht online", url("/cp/forms/contact_us/submissions/" . $this->submissionId))
+            ->line("Bericht: " . $this->submission["message"]);
+
+        if (isset($this->submission['vehicle'])) {
+            $mailMessage->line('Machine: ' . $this->submission['vehicle']);
+        }
+
+        $mailMessage->action("Bekijk bericht online", url("/cp/forms/contact_us/submissions/" . $this->submissionId))
             ->salutation("Met vriendelijke groet, \n\n Team BuddingTechniek");
+
+        return $mailMessage;
     }
 
     /**

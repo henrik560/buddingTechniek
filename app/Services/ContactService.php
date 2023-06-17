@@ -16,6 +16,12 @@ class ContactService
             return false;
         }
 
+        if (isset($data['vehicle'])) {
+            $data = array_merge($data, [
+                'vehicle' => $data['vehicle']['title'] . ' (' . $data['vehicle']['permalink'] . ')'
+            ]);
+        }
+
         $submission = $form->makeSubmission();
         $submission->data($data);
         $submission->save();

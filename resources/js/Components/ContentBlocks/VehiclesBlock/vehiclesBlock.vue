@@ -70,12 +70,12 @@ const getVehicles = computed(() => {
                 <TopBar @toggle-sort-filter-option="toggleSortFilterOption"></TopBar>
             </div>
             <div class="row flex gap-8 md:gap-16 md:flex-row flex-col">
-                <div class="column-left">
+                <div class="column-left w-full md:w-80">
                     <div class="row">
                         <SearchBar @search-key-changed="handleSearchKeyChanged"></SearchBar>
                     </div>
                 </div>
-                <div class="column-right">
+                <div class="column-right w-full">
                     <div class="vehicles-wrapper flex flex-wrap gap-6">
                         <vehicle v-for="vehicle in getVehicles" :key="vehicle.id" :vehicle="vehicle"></vehicle>
                     </div>

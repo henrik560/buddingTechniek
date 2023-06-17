@@ -60,8 +60,24 @@
                 }
 
                 .column-right {
-                    .header {
-                        .title {}
+                    .description {
+                        .content {
+                            .row {
+                                background-color: $color-light-gray;
+
+                                &:nth-child(odd) {
+                                    background-color: darken($color-light-gray, 5);
+                                }
+                            }
+                        }
+                    }
+
+                    .contact-us {
+                        .button {
+                            button {
+                                letter-spacing: 2px;
+                            }
+                        }
                     }
                 }
             }

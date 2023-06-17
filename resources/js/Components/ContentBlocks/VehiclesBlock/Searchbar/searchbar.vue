@@ -16,7 +16,7 @@ watch(searchKey, (newValue) => {
     <div class="vue-vehicle-searchbar">
         <div class="searchbar-wrapper">
             <div class="inner w-full">
-                <input class="w-full" type="text" v-model="searchKey" placeholder="Zoeken..." />
+                <input class="w-full text-black" type="text" v-model="searchKey" placeholder="Zoeken..." />
             </div>
         </div>
     </div>

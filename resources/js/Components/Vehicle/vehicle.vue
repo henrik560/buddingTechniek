@@ -17,7 +17,7 @@ const getSpecifications = computed(() => {
 })
 
 const getViewableUrl = computed(() => {
-    return `${window.location.href}/vehicle/${props.vehicle.slug}`;
+    return `/occasions/vehicle/${props.vehicle.slug}`;
 })
 
 const getPrice = computed(() => {

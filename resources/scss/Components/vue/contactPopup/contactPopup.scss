@@ -1,0 +1,78 @@
+.vue-contact-popup {
+    background-color: rgba($color: #000000, $alpha: .75);
+
+    .wrapper {
+        .container {
+            .inner {
+                .column {
+                    .block-mobile-hidden {
+                        display: none !important;
+
+                        @media screen and (min-width: 768px) {
+                            display: block;
+                        }
+                    }
+
+                    .form {
+                        .button-wrapper {
+                            &.invalid {
+                                cursor: not-allowed;
+
+                                .button {
+                                    pointer-events: none;
+                                }
+                            }
+
+                            &.valid {
+                                &:hover {
+                                    background-color: lighten($color-secondary, 10);
+                                }
+                            }
+
+                            .button {
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+
+                    .swiper {
+
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                            height: 100%;
+                            top: 0;
+                            margin-top: 0;
+                            background-color: rgba($color: $color-primary, $alpha: 0.3);
+                            color: rgba($color: $color-secondary, $alpha: 0.75);
+                            transition: $transition-sm;
+                            padding: 2rem;
+
+                            &:hover {
+                                font-weight: bold;
+                                background-color: rgba($color: $color-primary, $alpha: 0.7);
+                            }
+
+                            &.swiper-button-prev {
+                                left: 0;
+                            }
+
+                            &.swiper-button-next {
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    .specifications {
+                        .row {
+                            background-color: $color-light-gray;
+
+                            &:nth-child(odd) {
+                                background-color: darken($color-light-gray, 5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

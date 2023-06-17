@@ -26,6 +26,7 @@
 './Components/vue/textBlock/textBlock.scss',
 './Components/vue/contactBlock/globalContactBlock.scss',
 './Components/vue/contactBlock/large/contactBlock.scss',
+'./Components/vue/contactPopup/contactPopup.scss',
 './Components/vue/vehicleCategoriesBlock/category/category.scss',
 './Components/vue/vehicleBlock/searchBar/searchBar.scss';
 
@@ -37,4 +38,8 @@ body {
 
 .section {
     padding: 6rem 0;
+
+    @media screen and (max-width: 768px) {
+        padding: 3rem 0;
+    }
 }

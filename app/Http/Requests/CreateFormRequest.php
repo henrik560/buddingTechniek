@@ -28,6 +28,7 @@ class CreateFormRequest extends FormRequest
             'email' => 'required',
             'phonenumber' => 'required',
             'message' => 'required',
+            'vehicle' => 'nullable',
         ];
     }
 }

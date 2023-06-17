@@ -49,9 +49,9 @@ const submitForm = (event) => {
 <template>
     <div class="vue-contact-block section">
         <div class="container">
-            <div class="inner flex gap-8">
-                <div class="column w-1/2" :class="{ 'mx-auto w-full': !content.image_toggle }">
-                    <div class="inner-col w-11/12" :class="{'mx-auto' : !content.image_toggle }">
+            <div class="inner flex flex-col md:flex-row gap-8">
+                <div class="column w-full md:w-1/2" :class="{ 'mx-auto w-full': !content.image_toggle }">
+                    <div class="inner-col w-full md:w-11/12" :class="{'mx-auto' : !content.image_toggle }">
                         <h2 class="title">{{ content.title }}</h2>
                         <p class="description mb-8" v-html="content.content"></p>
                         <div class="form-wrapper">
@@ -82,7 +82,7 @@ const submitForm = (event) => {
                         </div>      
                     </div>
                 </div>
-                <div class="column w-1/2 flex items-center" v-if="content.image_toggle">
+                <div class="column w-full md:w-1/2 flex items-center" v-if="content.image_toggle">
                     <div class="image-wrapper">
                         <img :src="content.image.permalink" alt="Contact Block Image No Alt">
                     </div>

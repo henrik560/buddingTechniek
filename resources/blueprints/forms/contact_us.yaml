@@ -54,3 +54,14 @@ sections:
           visibility: visible
           validate:
             - required
+      -
+        handle: vehicle
+        field:
+          input_type: text
+          antlers: false
+          display: Machine
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible

@@ -40,7 +40,7 @@ sections:
           mode: list
           container: images
           folder: vehicles
-          restrict: true
+          restrict: false
           allow_uploads: true
           show_filename: true
           max_files: 1
@@ -59,7 +59,7 @@ sections:
           mode: list
           container: images
           folder: vehicles
-          restrict: true
+          restrict: false
           allow_uploads: true
           show_filename: true
           min_files: 1
