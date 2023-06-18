@@ -1,34 +1,36 @@
-//*Tailwind classes
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+//Tailwind classes
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-//*Base scss
-@import './variable.scss', './typography.scss';
+//Base scss
+@import './variable.scss';
+@import './typography.scss';
 
-//*Animations
+//Animations
 @import './Components/animations/animations.scss';
 
-//*Compontents (vue)
+//Compontents (vue)
 @import './Components/vue/vehicle/vehicle.scss';
 
-//*Components
-@import './Components/navbar.scss', './Components/footer.scss';
+//Components
+@import './Components/navbar.scss';
+@import './Components/footer.scss';
 
-//*ContentBlocks
-@import './Components/vue/headerBlock/half/headerBlock.scss',
-'./Components/vue/vehicleBlock/vehicleBlock.scss',
-'./Components/vue/recentVehiclesBlock/recentVehiclesBlock.scss',
-'./Components/vue/headerBlock/full/headerBlock.scss',
-'./Components/vue/textWithImage/textWIthImage.scss',
-'./Components/vue/vehicleBlock/topBar/topBar.scss',
-'./Components/vue/imagesSwiperBlock/imagesSwiperBlock.scss',
-'./Components/vue/textBlock/textBlock.scss',
-'./Components/vue/contactBlock/globalContactBlock.scss',
-'./Components/vue/contactBlock/large/contactBlock.scss',
-'./Components/vue/contactPopup/contactPopup.scss',
-'./Components/vue/vehicleCategoriesBlock/category/category.scss',
-'./Components/vue/vehicleBlock/searchBar/searchBar.scss';
+//ContentBlocks
+@import './Components/vue/headerBlock/half/headerBlock.scss';
+@import './Components/vue/vehicleBlock/vehicleBlock.scss';
+@import './Components/vue/recentVehiclesBlock/recentVehiclesBlock.scss';
+@import './Components/vue/headerBlock/full/headerBlock.scss';
+@import './Components/vue/textWithImage/textWIthImage.scss';
+@import './Components/vue/vehicleBlock/topBar/topBar.scss';
+@import './Components/vue/imagesSwiperBlock/imagesSwiperBlock.scss';
+@import './Components/vue/textBlock/textBlock.scss';
+@import './Components/vue/contactBlock/globalContactBlock.scss';
+@import './Components/vue/contactBlock/large/contactBlock.scss';
+@import './Components/vue/contactPopup/contactPopup.scss';
+@import './Components/vue/vehicleCategoriesBlock/category/category.scss';
+@import './Components/vue/vehicleBlock/searchBar/searchBar.scss';
 
 @import './Components/vue/pages/vehiclePage.scss';
 

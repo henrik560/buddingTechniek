@@ -1,12 +1,16 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
-import sass from 'vite-plugin-sass';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: 'resources/js/app.js',
+            input: [
+                'resources/js/app.js',
+                'resources/js/Pages/ContentPage.vue',
+                'resources/js/Pages/VehiclePage.vue',
+                'resources/scss/main.scss',
+            ],
             refresh: true,
         }),
         vue({
@@ -17,6 +21,5 @@ export default defineConfig({
                 },
             },
         }),
-        sass(),
-    ],
+    ]
 });
