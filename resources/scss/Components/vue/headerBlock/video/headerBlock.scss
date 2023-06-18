@@ -1,0 +1,18 @@
+.vue-header-video-block {
+    .wrapper {
+        height: auto !important;
+        min-height: 450px;
+
+        .header-video {
+            .iframe-video {
+                object-fit: contain;
+            }
+        }
+
+        .container {
+            .inner {
+                background-color: $color-light-gray;
+            }
+        }
+    }
+}

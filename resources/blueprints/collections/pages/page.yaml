@@ -31,6 +31,7 @@ sections:
             - images_swiper_block
             - text_block
             - contact_block
+            - header_video_block
   sidebar:
     display: Sidebar
     fields:

@@ -1,6 +1,7 @@
 <script setup>
 import headerHalfBlock from '@/Components/ContentBlocks/HeaderBlock/Half/headerBlock.vue';
 import headerFullBlock from '@/Components/ContentBlocks/HeaderBlock/Full/headerBlock.vue';
+import headerVideoBlock from '@/Components/ContentBlocks/HeaderBlock/Video/HeaderBlock.vue';
 import vehiclesBlock from '@/Components/ContentBlocks/VehiclesBlock/vehiclesBlock.vue';
 import RecentVehiclesBlock from '@/Components/ContentBlocks/RecentVehiclesBlock/RecentVehiclesBlock.vue';
 import TextWithImageBlock from '@/Components/ContentBlocks/TextWithImageBlock/TextWithImageBlock.vue';
@@ -25,6 +26,7 @@ const props = defineProps({
         <div v-for="block in contentBlocks" :key="block.id">
             <headerHalfBlock v-if="block.blueprint.handle == 'header_block'" :content="block"></headerHalfBlock>
             <headerFullBlock v-if="block.blueprint.handle == 'header_full_block'" :content="block"></headerFullBlock>
+            <headerVideoBlock v-if="block.blueprint.handle == 'header_video_block'" :content="block"></headerVideoBlock>
             <vehiclesBlock v-if="block.blueprint.handle == 'vehicles_block'" :content="block"></vehiclesBlock>
             <RecentVehiclesBlock v-if="block.blueprint.handle == 'recent_vehicles_block'" :content="block"></RecentVehiclesBlock>
             <TextWithImageBlock v-if="block.blueprint.handle == 'text_with_image_block'" :content="block"></TextWithImageBlock>
