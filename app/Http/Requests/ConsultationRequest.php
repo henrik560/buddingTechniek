@@ -26,7 +26,7 @@ class ConsultationRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|regex:/^[\w.-]+@[a-zA-Z_-]+?(?:.[a-zA-Z]{2,6})+$/',
-            'phoneNumber' => 'required'
+            'phoneNumber' => 'required',
         ];
     }
 

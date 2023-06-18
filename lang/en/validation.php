@@ -150,6 +150,7 @@ return [
     'url' => 'The :attribute must be a valid URL.',
     'ulid' => 'The :attribute must be a valid ULID.',
     'uuid' => 'The :attribute must be a valid UUID.',
+    'vehicle_not_found' => 'The requested vehicle does not exists!',
 
     /*
     |--------------------------------------------------------------------------

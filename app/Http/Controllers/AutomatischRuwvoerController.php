@@ -9,13 +9,11 @@ class AutomatischRuwvoerController extends Controller
 {
     /**
      * Handle an incoming request.
-     *
-     * @return Response
      */
-    function index(): Response
+    public function index(): Response
     {
         return Inertia::render('ContentPage', [
-            'title' => 'Automatisch Ruwvoer'
+            'title' => 'Automatisch Ruwvoer',
         ]);
     }
 }

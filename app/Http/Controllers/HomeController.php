@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         return Inertia::render('ContentPage', [
-            'title' => 'Home'
+            'title' => 'Home',
         ]);
     }
 }

@@ -9,7 +9,6 @@ use Inertia\Inertia;
 
 class ShareStatamicPageContentMiddleware
 {
-
     protected $contentPageService;
 
     public function __construct(ContentPageService $contentPageService)
@@ -20,7 +19,6 @@ class ShareStatamicPageContentMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @param  \App\Services\ContentPageService  $contentPageService
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse

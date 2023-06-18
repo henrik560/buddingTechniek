@@ -12,10 +12,10 @@ class SolatubeController extends Controller
      *
      * @return Response
      */
-    function index()
+    public function index()
     {
         return Inertia::render('ContentPage', [
-            'title' => 'Solatube'
+            'title' => 'Solatube',
         ]);
     }
 }

@@ -10,28 +10,25 @@ class OccasionsController extends Controller
 {
     /**
      * Handle an incoming request.
-     * 
-     * @return \Inertia\Response
      */
     public function index(): Response
     {
         return Inertia::render('ContentPage', [
-            'title' => 'Occasions'
+            'title' => 'Occasions',
         ]);
     }
 
     /**
      * Handle an incoming request.
-     *
-     * @param  string  $slug
-     * @return \Inertia\Response
      */
-    function show(string $slug): Response
+    public function show(string $slug): Response
     {
-        $vehicle = collect(Collection::findByHandle("vehicles")->queryEntries()->where('slug', $slug)->get())->first();
+        $vehicle = collect(Collection::findByHandle('vehicles')->queryEntries()->where('slug', $slug)->get())->first();
+
+        abort_if(! $vehicle, 404, __('validation.vehicle_not_found'));
 
         return Inertia::render('VehiclePage', [
-            'vehicle' => $vehicle
+            'vehicle' => $vehicle,
         ]);
     }
 }

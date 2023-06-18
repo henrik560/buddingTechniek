@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { onMounted, ref, computed } from 'vue';
 
-import vehicle from '@/Components/Vehicle/vehicle.vue';
+import vehicleCard from '@/Components/Vehicle/vehicle.vue';
 import SearchBar from '@/Components/ContentBlocks/VehiclesBlock/Searchbar/searchbar.vue'
 import TopBar from '@/Components/ContentBlocks/VehiclesBlock/TopBar/TopBar.vue';
 
@@ -77,7 +77,7 @@ const getVehicles = computed(() => {
                 </div>
                 <div class="column-right w-full">
                     <div class="vehicles-wrapper flex flex-wrap gap-6">
-                        <vehicle v-for="vehicle in getVehicles" :key="vehicle.id" :vehicle="vehicle"></vehicle>
+                        <vehicleCard v-for="vehicle in getVehicles" :key="vehicle.id" :vehicle="vehicle"></vehicleCard>
                     </div>
                 </div>
             </div>

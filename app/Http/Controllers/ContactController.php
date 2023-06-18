@@ -13,22 +13,16 @@ class ContactController extends Controller
 {
     /**
      * Handle an incoming request.
-     *
-     * @return Response
      */
-    function index(): Response
+    public function index(): Response
     {
         return Inertia::render('ContentPage', [
-            'title' => 'Contact'
+            'title' => 'Contact',
         ]);
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  CreateFormRequest $request
-     * @param  ContactService $contactService
-     * @return JsonResponse
      */
     public function store(CreateFormRequest $request, ContactService $contactService): JsonResponse
     {
@@ -38,7 +32,7 @@ class ContactController extends Controller
 
         $submission = $contactService->createSubmission('contact_us', $request->only('name', 'email', 'phonenumber', 'message', 'vehicle'));
 
-        if (!$submission) {
+        if (! $submission) {
             return response()->json(['message' => __('form.form_submission_error')], 422);
         }
 

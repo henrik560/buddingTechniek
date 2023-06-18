@@ -9,15 +9,12 @@ class TaxonomyController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @param  string  $handle
-     * @return JsonResponse
      */
-    function index(string $handle): JsonResponse
+    public function index(string $handle): JsonResponse
     {
         $taxonomy = Taxonomy::findByHandle($handle);
 
-        if (!$taxonomy) {
+        if (! $taxonomy) {
             return response()->json(['error' => 'Taxonomy not found'], 404);
         }
 

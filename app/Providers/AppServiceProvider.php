@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Facades\GlobalSet;
-use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {

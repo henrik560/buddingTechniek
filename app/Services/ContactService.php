@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
-use Statamic\Facades\Form;
-use Illuminate\Support\Facades\Notification;
 use App\Notifications\FormSubmissionNotification;
+use Illuminate\Support\Facades\Notification;
+use Statamic\Facades\Form;
 
 class ContactService
 {
@@ -12,13 +12,13 @@ class ContactService
     {
         $form = Form::find($handle);
 
-        if (!$form) {
+        if (! $form) {
             return false;
         }
 
         if (isset($data['vehicle'])) {
             $data = array_merge($data, [
-                'vehicle' => $data['vehicle']['title'] . ' (' . $data['vehicle']['permalink'] . ')'
+                'vehicle' => $data['vehicle']['title'].' ('.$data['vehicle']['permalink'].')',
             ]);
         }
 

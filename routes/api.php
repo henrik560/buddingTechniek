@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\PagesContentController;
 use App\Http\Controllers\SiteSettingsController;
 use App\Http\Controllers\TaxonomyController;
 use App\Http\Controllers\VehicleController;

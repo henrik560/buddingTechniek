@@ -10,45 +10,41 @@ class VehicleController extends Controller
 {
     /**
      * Handle an incoming request.
-     *
-     * @return JsonResponse
      */
     public function index(): JsonResponse
     {
         try {
             /** @var Collection|null $vehicles */
-            $vehicles = Collection::findByHandle("vehicles")
+            $vehicles = Collection::findByHandle('vehicles')
                 ->queryEntries()
                 ->get();
 
             return response()->json([
-                'vehicles' => $vehicles
+                'vehicles' => $vehicles,
             ]);
         } catch (Exception $e) {
-            return response()->json(["message" => "Er is iets fout gegaan: " . $e->getMessage()], 422);
+            return response()->json(['message' => 'Er is iets fout gegaan: '.$e->getMessage()], 422);
         }
     }
 
     /**
      * Handle an incoming request.
-     *
-     * @return JsonResponse
      */
     public function getRecentVehicles(): JsonResponse
     {
         try {
             /** @var Collection|null $vehicles */
-            $vehicles = Collection::findByHandle("vehicles")
+            $vehicles = Collection::findByHandle('vehicles')
                 ->queryEntries()
                 ->orderBy('date', 'desc')
                 ->limit(4)
                 ->get();
 
             return response()->json([
-                'vehicles' => $vehicles
+                'vehicles' => $vehicles,
             ]);
         } catch (Exception $e) {
-            return response()->json(["message" => "Er is iets fout gegaan: " . $e->getMessage()], 422);
+            return response()->json(['message' => 'Er is iets fout gegaan: '.$e->getMessage()], 422);
         }
     }
 }
