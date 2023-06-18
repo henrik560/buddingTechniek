@@ -13,7 +13,7 @@ class SiteSettingsController extends Controller
      *
      * @param  string  $handle
      */
-    public function show(?string $handle): JsonResponse
+    public function show(string $handle): JsonResponse
     {
         if (is_null($handle)) {
             throw new HttpException(404, 'Please provide a global set handler');
@@ -22,7 +22,7 @@ class SiteSettingsController extends Controller
         /** @var GlobalSet|null $globals */
         $globals = GlobalSet::findByHandle($handle)->fileData();
 
-        if (! $globals) {
+        if (!$globals) {
             throw new HttpException(404, 'Global set handler not found!');
         }
 

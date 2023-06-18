@@ -4,7 +4,7 @@ import { computed } from 'vue';
 const props = defineProps({
     vehicle: {
         type: Object,
-        required: false
+        required: true
     }
 });
 
