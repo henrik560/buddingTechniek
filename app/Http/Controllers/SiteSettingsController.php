@@ -10,8 +10,6 @@ class SiteSettingsController extends Controller
 {
     /**
      * Display the specified resource.
-     *
-     * @param  string  $handle
      */
     public function show(string $handle): JsonResponse
     {
@@ -22,7 +20,7 @@ class SiteSettingsController extends Controller
         /** @var GlobalSet|null $globals */
         $globals = GlobalSet::findByHandle($handle)->fileData();
 
-        if (!$globals) {
+        if (! $globals) {
             throw new HttpException(404, 'Global set handler not found!');
         }
 
